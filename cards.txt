@@ -1,0 +1,12 @@
+Apocalypse: Awakened,common
+Black Panther: Wakanda Chief,common
+Captain America: Special Ops,common
+John Stewart: Marine,common
+Kilowog: Drill Instructor,common
+Marvel Girl: Telekinetic,common
+Mogo: Living Planet,common
+Nightcrawler: Abandoned,common
+Professor X: Charles Francis Xavier,common
+Sinestro: Fears Made Into Light,common
+Vision: Destiny Control,common
+Wolverine: Wildboy,uncommon

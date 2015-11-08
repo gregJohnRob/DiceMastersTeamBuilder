@@ -1,0 +1,11 @@
+Have a document (text or database, as yet to be decided) that will contain all
+of the previous teams that it knows about. Each time a card is picked, the 
+program will pull information from the teams it already knows about and compile
+this to give the user suggestions for other cards that it should use. 
+
+Land marks: 
+	1. Have the program read in the file, treating all teams as equals when it
+		decides on who should be on the team.
+	2. Take into account of the win/lose ration of each team, putting the ones
+		with the highest win rate to have the higher priority.
+	3. provide a GUI for the program to run on.
