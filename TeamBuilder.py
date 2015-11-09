@@ -40,12 +40,19 @@ class Display(tk.Frame):
     user_team = Team([])  # stores the users current team
     teams = []            # stores a list of all of the teams
     total = 0.0           # used to calculate the percentage that a certain
+    label_width = 250
 
     def __init__(self, parent, card_file, team_file):
         tk.Frame.__init__(self, parent, background="white")
         self.parent = parent
-        self.parent.title("Centered window")
+        self.parent.title("Team Builder")
         self.pack(fill=tk.BOTH, expand=1)
+        w = tk.Label(self,
+                     background="purple",
+                     width=self.label_width,
+                     height=self.parent.winfo_screenheight()
+        )
+        w.place(y=0, x=(self.parent.winfo_screenwidth()-self.label_width))
         self.gen_teams(team_file)
         self.gen_card_dictionary(card_file)
         self.display_buttons()
@@ -104,7 +111,8 @@ class Display(tk.Frame):
                 if self.total == 0:
                     card.button.place(x=0)
                 else:
-                    card.button.place(x=((card.priority / self.total)*self.parent.winfo_screenwidth()))
+                    x=(card.priority/self.total)*(self.parent.winfo_screenwidth()-self.label_width)
+                    card.button.place(x=x)
             else:
                 card.button.place(x=self.parent.winfo_screenwidth() - card.button.winfo_width())
 
@@ -156,3 +164,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
