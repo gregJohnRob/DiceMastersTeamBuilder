@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2dd2614d-10fd-4066-997a-5b3736f395b5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Card.py" afterPath="$PROJECT_DIR$/Card.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TeamBuilder.py" afterPath="$PROJECT_DIR$/TeamBuilder.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cards.txt" afterPath="$PROJECT_DIR$/cards.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teams.txt" afterPath="$PROJECT_DIR$/teams.txt" />
-    </list>
+    <list default="true" id="2dd2614d-10fd-4066-997a-5b3736f395b5" name="Default" comment="" />
     <ignored path="DiceMastersTeamBuilder.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,7 +27,7 @@
       <file leaf-file-name="TeamBuilder.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TeamBuilder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.76311606" vertical-offset="1500" max-vertical-offset="2895">
+            <state vertical-scroll-proportion="0.5117271" vertical-offset="1500" max-vertical-offset="2895">
               <caret line="132" column="21" selection-start-line="132" selection-start-column="21" selection-end-line="132" selection-end-column="21" />
               <folding>
                 <element signature="e#216#226#0" expanded="true" />
@@ -173,7 +166,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32020727" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32020727" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -237,7 +230,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TeamBuilder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.76311606" vertical-offset="1500" max-vertical-offset="2895">
+        <state vertical-scroll-proportion="0.5117271" vertical-offset="1500" max-vertical-offset="2895">
           <caret line="132" column="21" selection-start-line="132" selection-start-column="21" selection-end-line="132" selection-end-column="21" />
           <folding>
             <element signature="e#216#226#0" expanded="true" />

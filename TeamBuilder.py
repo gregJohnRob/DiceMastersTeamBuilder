@@ -3,7 +3,6 @@
 ###################################################################################################
 
 
-import sys
 import Tkinter as tk
 from PIL import Image, ImageTk
 
@@ -47,17 +46,16 @@ class Display(tk.Frame):
     label_width = 250
     label = tk.Label()
 
-    def __init__(self, parent, card_file, team_file):
-        tk.Frame.__init__(self, parent, background="white")
-        self.parent = parent
-        self.parent.title("Team Builder")
+    def __init__(self, card_file, team_file):
+        tk.Frame.__init__(self, None, background="white")
+        self.master.title("Team Builder")
         self.pack(fill=tk.BOTH, expand=1)
         w = tk.Label(self,
                      background="purple",
                      width=self.label_width,
-                     height=self.parent.winfo_screenheight()
+                     height=self.master.winfo_screenheight()
         )
-        w.place(y=0, x=(self.parent.winfo_screenwidth()-self.label_width))
+        w.place(y=0, x=(self.master.winfo_screenwidth()-self.label_width))
         self.gen_teams(team_file)
         self.gen_card_dictionary(card_file)
         self.display_buttons()
@@ -131,10 +129,10 @@ class Display(tk.Frame):
                 if self.total == 0:
                     card.button.place(x=0)
                 else:
-                    x=(card.priority/self.total)*(self.parent.winfo_screenwidth()-self.label_width-card.button.winfo_width())
+                    x=(card.priority/self.total)*(self.master.winfo_screenwidth()-self.label_width-card.button.winfo_width())
                     card.button.place(x=x)
             else:
-                card.button.place(x=self.parent.winfo_screenwidth() - card.button.winfo_width())
+                card.button.place(x=self.master.winfo_screenwidth() - card.button.winfo_width())
 
     # Takes in the name of a card, adds it to the user's team and then calculates the new priority
     # values before updating the display
@@ -176,12 +174,10 @@ class Display(tk.Frame):
 
 
 def main():
-    root = tk.Tk()
-    root.geometry("250x150+300+300")
-    ex = Display(root, "cards.txt", "teams.txt")
-    root.mainloop()
+    ex = Display("cards.txt", "teams.txt")
+    ex.master.geometry("250x150+300+300")
+    ex.mainloop()
     return 0
 
 if __name__ == "__main__":
     main()
-
