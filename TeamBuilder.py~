@@ -3,9 +3,7 @@
 ###################################################################################################
 
 
-import sys
 import Tkinter as tk
-from PIL import Image, ImageTk
 
 
 ###################################################################################################
@@ -31,8 +29,6 @@ def is_int(string):
         return False
 
 
-
-
 ###################################################################################################
 # Main display window
 ###################################################################################################
@@ -44,36 +40,16 @@ class Display(tk.Frame):
     user_team = Team([])  # stores the users current team
     teams = []            # stores a list of all of the teams
     total = 0.0           # used to calculate the percentage that a certain
-    label_width = 250
-    label = tk.Label()
 
     def __init__(self, parent, card_file, team_file):
         tk.Frame.__init__(self, parent, background="white")
         self.parent = parent
-        self.parent.title("Team Builder")
+        self.parent.title("Centered window")
         self.pack(fill=tk.BOTH, expand=1)
-        w = tk.Label(self,
-                     background="purple",
-                     width=self.label_width,
-                     height=self.parent.winfo_screenheight()
-        )
-        w.place(y=0, x=(self.parent.winfo_screenwidth()-self.label_width))
         self.gen_teams(team_file)
         self.gen_card_dictionary(card_file)
         self.display_buttons()
         self.pack(fill=tk.BOTH)
-
-    def on_enter(self, name):
-        image = Image.open(self.card_dictionary[name].file_name)
-        photo = ImageTk.PhotoImage(image)
-        self.label = tk.Label(image=photo)
-        self.label.image = photo # keep a reference!
-        self.label.pack()
-
-
-
-    def on_exit(self, event):
-        self.label.pack_forget()
 
     # takes in a file name and uses this to construct a dictionary of all of the cards
     # and creates all of the buttons
@@ -101,9 +77,6 @@ class Display(tk.Frame):
             elif rarity == "promo":
                 self.card_dictionary[name].button.configure(bg="blue")
             self.card_dictionary[name].button.place(y=i)
-            self.card_dictionary[name].gen_file_name()
-            self.card_dictionary[name].button.bind("<Enter>", lambda event, name=name: self.on_enter(name))
-            self.card_dictionary[name].button.bind("<Leave>", self.on_exit)
             i += 30
         card_date_base.close()
 
@@ -131,8 +104,7 @@ class Display(tk.Frame):
                 if self.total == 0:
                     card.button.place(x=0)
                 else:
-                    x=(card.priority/self.total)*(self.parent.winfo_screenwidth()-self.label_width-card.button.winfo_width())
-                    card.button.place(x=x)
+                    card.button.place(x=((card.priority / self.total)*self.parent.winfo_screenwidth()))
             else:
                 card.button.place(x=self.parent.winfo_screenwidth() - card.button.winfo_width())
 
@@ -184,4 +156,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

@@ -5,8 +5,8 @@ John Stewart: Marine,common
 Kilowog: Drill Instructor,common
 Marvel Girl: Telekinetic,common
 Mogo: Living Planet,common
-Nightcrawler: Abandoned,common
-Professor X: Charles Francis Xavier,common
+Nightcrawler: Abandoned,uncommon
+Professor X: Charles Francis Xavier,rare
 Sinestro: Fears Made Into Light,common
-Vision: Destiny Control,common
-Wolverine: Wildboy,uncommon
+Vision: Density Control,common
+Wolverine: Wildboy,common
